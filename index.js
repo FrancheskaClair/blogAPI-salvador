@@ -19,13 +19,13 @@ app.use(express.urlencoded({ extended: true }));
 
 
 const corsOptions = {
-    origin: ['http://localhost:3000', 'http://localhost:4000'],
+    origin: ['https://blog-app-client-eight.vercel.app/'],
     credentials: true,
     optionsSuccessStatus: 200
 };
 
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 //[SECTION] Database Setup
 mongoose.connect("mongodb+srv://admin123:admin123@b546.9qk9nsf.mongodb.net/BlogAPI?retryWrites=true&w=majority&appName=b546");
